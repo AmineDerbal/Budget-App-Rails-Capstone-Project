@@ -1,0 +1,20 @@
+<%= render partial: 'shared/header', locals: {middle: 'NEW CATEGORY'}%>
+
+<%= form_with(model: @group, url: groups_path, method: :post ) do |f| %>
+
+<div class="form-container">
+ <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class:'form-control' %>
+  </div>
+
+   <div class="field">
+  <label for="icon">ICON </label>
+  <%= f.file_field :icon, autofocus: true, autocomplete: "off", placeholder: "Icons", class:'form-control' %>
+  </div>
+
+ <%= f.submit 'Save', class: 'btn btn-primary save_button'  %>
+
+</div>
+
+<%end%>
+

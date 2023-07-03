@@ -1,0 +1,34 @@
+<%= render partial: 'shared/header', locals: {middle: 'CATEGORIES'}%>
+
+<div class = 'main-content'>
+
+<% if @groups.any? %>
+
+<% @groups.each do |group| %>
+<div class = 'category-card'>
+<div class = 'icon-container'>
+<% if group.icon.present? %>
+  <%= image_tag group.icon %>
+<% end %>
+</div>
+<div class='group-information'> 
+ <p> <%=group.name%> </p>
+ <p> <%=group.created_at.strftime('%d %b %Y')%> </p>
+ </div>
+
+<div class='group-amount'> $17.00 </div>
+
+
+
+</div>
+
+<%end%>
+<% else %>
+<h1 class='heading'>The category list is empty</h1>
+<%end%>
+
+
+<%= link_to "Add category", new_group_path, method: :get, class: "btn btn-primary add-category" %>
+
+</div>
+
