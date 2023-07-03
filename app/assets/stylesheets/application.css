@@ -9,10 +9,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Proxima Nova';
+  color: #434b54;
 }
 
-.splash-title {
-  font-family: 'Proxima Nova';
+.splash-title,
+.heading {
   font-weight: bold;
   text-align: center;
 }
@@ -43,8 +45,20 @@
   margin: 0.2rem auto;
 }
 
+.save_button {
+  width: 90%;
+}
+
 .link_button {
   width: 100%;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header {
@@ -81,4 +95,56 @@
 .cancel-center {
   margin-left: 5%;
   margin-right: auto;
+}
+
+#hamburger-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.field input[type='file'] {
+  margin-left: 5px; /* Adjust the value as needed */
+}
+
+.add-category {
+  margin: 2rem 0;
+}
+
+.category-card {
+  background-color: #f0f2f1;
+  display: flex;
+  width: 80%;
+  padding: 2rem;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.icon-container {
+  width: 35%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.icon-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.group-information {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
