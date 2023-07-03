@@ -3,7 +3,7 @@ class Group < ApplicationRecord
  has_many :expense_groups, class_name: "ExpenseGroup", foreign_key: "group_id", dependent: :destroy
  has_many :expenses, through: :expense_groups
 
- accepts__nested_attributes_for :expense_groups
+ accepts_nested_attributes_for :expense_groups
 
  validates :name, presence: true
  validates :icon, presence: true
