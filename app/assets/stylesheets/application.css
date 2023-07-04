@@ -65,6 +65,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem 0;
+  margin-bottom: 3.5rem;
 }
 
 .header {
@@ -125,17 +126,20 @@
 
 #add-category,
 #add-expense {
-  margin: 2rem 0;
-  background-color: #5fb523;
   color: #fff;
-}
-
-#add-category {
   width: 80%;
+  text-align: center;
+  border: 1px solid #fff;
 }
 
-#add-expense {
-  width: 70%;
+.footer-button {
+  width: 100%;
+  background-color: #5fb523;
+  position: fixed;
+  padding: 1rem 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .category-card {
