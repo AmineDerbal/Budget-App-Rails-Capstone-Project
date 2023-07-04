@@ -75,12 +75,12 @@ The **Budget Expenses App** is a classic example of a budget website, that helps
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [You can check the live demo here](https://rails-recipe-kocr.onrender.com)
+- [You can check the live demo here](https://budget-expense-app.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="presentation"></a>
-- [Link to video presentation](https://drive.google.com/file/d/16VbNGHqAvV6UIGr_1glezgBkX-qeAZCP/view?usp=sharing)
+- [Link to video presentation](https://www.loom.com/share/75541b5f79bc4c3ea7701da3b5185450?sid=18c2c3e0-870c-4904-8221-5c065014e947)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
