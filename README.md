@@ -80,7 +80,7 @@ The **Budget Expenses App** is a classic example of a budget website, that helps
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="presentation"></a>
-- [Link to video presentation](https://www.loom.com/share/75541b5f79bc4c3ea7701da3b5185450?sid=18c2c3e0-870c-4904-8221-5c065014e947)
+- [Link to video presentation](https://www.loom.com/share/af2e66d770d445999b3478945981f9a4?sid=d517e021-2439-4195-b771-771572d77a39)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
