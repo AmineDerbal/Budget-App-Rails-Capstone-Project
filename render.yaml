@@ -1,7 +1,7 @@
 databases:
   - name: amine_database
-    databaseName: amine_database
-    user: amine_database_user
+    databaseName: amine_database_xdsy
+    user: amine_database_xdsy_user
 
 services:
   - type: web
