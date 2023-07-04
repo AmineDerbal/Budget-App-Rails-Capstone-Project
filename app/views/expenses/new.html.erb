@@ -1,5 +1,5 @@
 <%= render partial: 'shared/header', locals: {left:'back', path:group_expenses_path(@group) , middle: 'NEW EXPENSE'}%>
-
+<%= render partial: 'shared/notice' %>
 <% if params[:notice].present? %>
   <div class="notice">
     <%= params[:notice] %>

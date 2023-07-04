@@ -1,5 +1,5 @@
 <%= render partial: 'shared/header',locals: {left:'back', path:root_path ,middle: 'EXPENSES $'+ number_with_precision(@expenses_sum, precision: 2).to_s }%>
-
+<%= render partial: 'shared/notice' %>
 <div class='main-content'>
 <% if @expenses.empty? %>
 
