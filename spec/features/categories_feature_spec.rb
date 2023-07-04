@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Categories visit index ', type: :feature do
+RSpec.describe 'Categories visit index and new ', type: :feature do
   include Devise::Test::IntegrationHelpers
   include ActionView::Helpers::NumberHelper
   before(:each) do
