@@ -11,7 +11,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Rails-recipe-app](#-Rails-recipe-app-)
+- [📖 Budget-Expenses-App](#-Budget-Expenses-App-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
