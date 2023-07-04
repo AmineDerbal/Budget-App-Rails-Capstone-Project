@@ -1,4 +1,4 @@
-<%= render partial: 'shared/header', locals: {middle: 'NEW CATEGORY'}%>
+<%= render partial: 'shared/header', locals: {left:'back', path:root_path, middle: 'NEW CATEGORY'}%>
 
 <%= form_with(model: @group, url: groups_path, method: :post ) do |f| %>
 
