@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -63,10 +63,23 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "budget_app_production"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = {  host: 'https://budget-expense-app.onrender.com' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'budget-expense-app.onrender.com',
+    user_name:            'aminedoran31@gmail.com',
+    password:             'biywwagyuptnmlgt',
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5 }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+   config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

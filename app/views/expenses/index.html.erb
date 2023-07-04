@@ -1,0 +1,26 @@
+<%= render partial: 'shared/header',locals: {left:'back', path:root_path ,middle: 'EXPENSES $'+ number_with_precision(@expenses_sum, precision: 2).to_s }%>
+<%= render partial: 'shared/notice' %>
+<div class='main-content'>
+<% if @expenses.empty? %>
+
+<h1 class='heading blue-text'> No Expense was made </h1>
+
+<%else%>
+<h1 class='heading blue-text' > List of expenses </h1>
+<% @expenses.each do |expense| %>
+<div class = 'expense-card'> 
+<p> <strong>Expense : </strong> <%=expense.name%> </p>
+<p><strong> Date : </strong> <%=expense.created_at.strftime('%d %b %Y')%> </p>
+<p> <strong>TOTAL PAYEMENT </strong>    $<%=number_with_precision(expense.amount, precision: 2)%> </p>
+</div>
+
+<% end %>
+
+
+
+<%end%>
+</div>
+
+ <div class='footer-button'>
+<%= link_to "ADD EXPENSE", new_group_expense_path(@group), method: :get, class: "btn ", id:'add-expense' %>
+</div>

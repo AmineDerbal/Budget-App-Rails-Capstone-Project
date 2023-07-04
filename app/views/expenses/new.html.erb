@@ -1,0 +1,34 @@
+<%= render partial: 'shared/header', locals: {left:'back', path:group_expenses_path(@group) , middle: 'NEW EXPENSE'}%>
+<%= render partial: 'shared/notice' %>
+<% if params[:notice].present? %>
+  <div class="notice">
+    <%= params[:notice] %>
+  </div>
+<% end %>
+
+<%= form_with(model: @expense, url: group_expenses_path(@group), method: :post ) do |f| %>
+
+<div class="form-container">
+ <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class:'form-control' %>
+  </div>
+
+   <div class="field">
+  <%= f.number_field :amount, autofocus: true, autocomplete: "off", step:'0.01',min:'0.01', placeholder: "Amount", class:'form-control' %>
+  </div>
+        <h3> select the categories of this expense </h3>
+  <div class="field categories-check">
+    <% @categories.each do |category| %>
+    <div>
+      <%= f.check_box :category_ids, { multiple: true }, category.id, nil %>
+      <%= category.name %><br>
+     </div>
+    <% end %>
+  </div>
+
+ <%= f.submit 'Save', class: 'btn btn-primary save_button'  %>
+
+</div>
+
+<%end%>
+

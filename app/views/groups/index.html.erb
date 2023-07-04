@@ -1,0 +1,29 @@
+<%= render partial: 'shared/header', locals: {left:'hamburger' , middle: 'CATEGORIES'}%>
+<%= render partial: 'shared/notice' %>
+
+<div class='main-content'>
+  <% if @groups.any? %>
+  <h1 class = 'heading blue-text'> List of Categories of <%=@user.name%> </h1>
+    <% @groups.each do |group| %>
+      <%= link_to group_expenses_path(group),class:'category-card' do %>
+       
+          <div class='icon-container'>
+            <% if group.icon.present? %>
+              <%= image_tag group.icon %>
+            <% end %>
+          </div>
+          <div class='group-information'>
+            <p><%= group.name %></p>
+            <p><%= group.created_at.strftime('%d %b %Y') %></p>
+          </div>
+          <div class='group-amount'> $<%=number_with_precision(group.expenses.sum(:amount), precision: 2) || 0.00 %> </div>
+   
+      <% end %>
+    <% end %>
+  <% else %>
+    <h1 class='heading blue-text'>No category exists</h1>
+  <% end %>
+</div>
+   <div class='footer-button'>
+  <%= link_to "ADD CATEGORY", new_group_path, method: :get, class: "btn", id:'add-category' %>
+  </div>
