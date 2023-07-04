@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
-  def index  
-    @user = current_user  
+  def index
+    @user = current_user
     @group = Group.find(params[:group_id])
     @expenses = @group.expenses.order(created_at: :desc)
     @expenses_sum = @expenses.sum(:amount) || 0
@@ -13,12 +13,12 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
   end
 
-  def create 
+  def create
     @user = current_user
     @group = Group.find(params[:group_id])
     category_ids = params[:expense][:category_ids]
- 
-    if category_ids.present? 
+
+    if category_ids.present?
 
       @expense = Expense.new(expense_params.except(:category_ids))
       @expense.author = @user
@@ -29,21 +29,19 @@ class ExpensesController < ApplicationController
         redirect_to group_expenses_path(@group)
 
       else
-        redirect_to new_group_expense_path(@group,notice: 'Failed to create expense')
+        redirect_to new_group_expense_path(@group, notice: 'Failed to create expense')
 
       end
     else
-    
-      redirect_to new_group_expense_path(@group,notice: 'Please select at least one category')
-     
-    end
 
+      redirect_to new_group_expense_path(@group, notice: 'Please select at least one category')
+
+    end
   end
 
   private
-  def expense_params
 
+  def expense_params
     params.require(:expense).permit(:name, :amount, category_ids: [])
   end
-
 end
